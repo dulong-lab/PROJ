@@ -412,7 +412,7 @@ static PJ_LP peirce_q_inverse(PJ_XY xy, PJ *P) {
     } break;
 
     case PEIRCE_Q_VERTICAL: {
-        const double y = xy.y + K + Q->scrolly * (4 * K);
+        const double y = xy.y + K - Q->scrolly * (4 * K);
         real = (xy.x - y) / 2.0;
         imag = (xy.x + y) / 2.0;
     } break;
